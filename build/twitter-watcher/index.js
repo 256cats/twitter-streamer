@@ -40,7 +40,7 @@ var config_1 = require("../common/config");
 var serializer_1 = require("../common/serializer");
 var stream_1 = require("./stream");
 var lodash_1 = require("lodash");
-var CLIENT_POLLING_INTERVAL = 500;
+var CLIENT_REFRESH_INTERVAL = 500;
 process.on('uncaughtException', function (error) {
     console.log('uncaughtException', error);
     process.exit(1);
@@ -89,8 +89,6 @@ function main() {
                                     newStreams = _a.sent();
                                     keys1 = Object.keys(streams);
                                     keys2 = Object.keys(newStreams);
-                                    console.log('keys1', keys1);
-                                    console.log('keys2', keys2);
                                     if (!lodash_1.isEqual(keys1, keys2)) {
                                         streams = newStreams;
                                         stream_1.restartStream(streams);
@@ -98,7 +96,7 @@ function main() {
                                     return [2 /*return*/];
                             }
                         });
-                    }); }, CLIENT_POLLING_INTERVAL);
+                    }); }, CLIENT_REFRESH_INTERVAL);
                     return [2 /*return*/];
             }
         });
