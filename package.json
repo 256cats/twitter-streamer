@@ -1,0 +1,51 @@
+{
+  "name": "twitter-streamer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/256cats/twitter-streamer.git",
+  "author": "Andrey Enavin <andrey@256cats.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./build/* && tsc",
+    "twitter-watcher": "node build/twitter-watcher/index.js",
+    "web": "node build/web/index.js",
+    "lint:ts": "tslint  --project . --exclude '*.test.*' --format stylish --force",
+    "test": "jest --watchAll --coverage",
+    "test-no-watch": "jest"
+  },
+  "dependencies": {
+    "@turf/turf": "^4.7.3",
+    "@types/express": "^4.0.39",
+    "@types/geojson": "^1.0.6",
+    "@types/socket.io": "^1.4.31",
+    "elasticsearch": "^13.3.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "redis": "^2.8.0",
+    "sb-promisify": "^2.0.2",
+    "socket.io": "^2.0.4",
+    "socket.io-redis": "^5.2.0",
+    "ts-node": "^3.3.0",
+    "tslib": "^1.8.0",
+    "twitter": "^1.7.1",
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.4",
+    "@types/chalk": "^0.4.31",
+    "@types/cheerio": "^0.22.2",
+    "@types/form-data": "0.0.32",
+    "@types/jest": "^20.0.2",
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-helmet": "^3.1.1",
+    "@types/koa-router": "^7.0.22",
+    "@types/log4js": "^0.0.33",
+    "@types/nightmare": "^1.6.33",
+    "@types/node": "^8.0.47",
+    "@types/pg": "^6.1.43",
+    "@types/redis": "^2.6.0",
+    "@types/uuid": "^3.4.0",
+    "tslint": "^5.8.0"
+  }
+}

@@ -1,0 +1,15 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost:8082', {
+    query: window.location.search.substr(1)
+  });
+
+  socket.on('newTweets', function (data) {
+    var time = + new Date();
+    console.log(data.map(item => item.text));
+    for(var i = 0; i < data.length; i++) {
+      console.log('time_diff', Math.floor((time - parseInt(data[i].timestamp_ms, 10))/1000));
+    }
+    
+  });
+</script>

@@ -1,0 +1,1 @@
+{"version":3,"file":"promise.js","sourceRoot":"","sources":["../../src/common/promise.ts"],"names":[],"mappings":";;AAAA,eAAyB,EAAW,EAAE,OAAe;IACnD,MAAM,CAAC,IAAI,OAAO,CAAC,UAAA,OAAO;QACxB,UAAU,CAAC,cAAM,OAAA,OAAO,CAAC,EAAE,EAAE,CAAC,EAAb,CAAa,EAAE,OAAO,CAAC,CAAA;IAC1C,CAAC,CAAC,CAAA;AACJ,CAAC;AAJD,sBAIC"}

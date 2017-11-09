@@ -1,0 +1,32 @@
+{
+  "channel": {
+    "users": "users",
+    "stream": "stream",
+    "dispatcher": "dispatcher"
+  },
+  "rabbitmq": {
+    "url": "amqp://localhost",
+    "reconnectTimeout": 1000
+  },
+  "elastic": {
+    "host": "localhost:9201",
+    "index": {
+      "name": "tweets",
+      "type": "tweet"
+    }
+  },
+  "redis": {
+    "port": 6381,
+    "key": {
+      "streams": "streams"
+    },
+    "channel": {
+      "streamAdd": "stream:add",
+      "streamRemove": "stream:remove"
+    }
+  },
+  "server": {
+    "port": 8082,
+    "pollingInterval": 1000
+  }
+}
